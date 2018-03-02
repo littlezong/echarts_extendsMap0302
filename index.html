@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<title></title>
+	</head>
+	<body>
+		<div id="main" style="width: 100%; height: 600px;"></div>
+
+		<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="./lib/echarts.min.js" ></script>
+		<script type="text/javascript" src="./map/jiangxi.js"></script>
+		<script type="text/javascript" src="./extendsMap.js"></script>
+		<script>
+            var myChart = echarts.extendsMap('main', {
+            	bgColor: '#154e90',
+				mapName: '江西',
+				goDown: true,
+				callback: function(name, option, instance){
+					// console.log(name, option, instance);
+				},
+				data: [{
+					name: '南昌',
+					value: 10,
+					level: 1
+				}, {
+					name: '景德镇',
+					value: 12,
+					level: 2
+				}, {
+					name: '萍乡',
+					value: 11,
+					level: 3
+				}, {
+					name: '赣州',
+					value: 16,
+					level: 2
+				}, {
+					name: '吉安',
+					value: 12,
+					level: 1
+				}]
+			});
+            // 初始化实例对象后可设置实例对象要显示的地图
+//            myChart.setMap('景德镇市');
+
+		</script>
+	</body>
+</html>
